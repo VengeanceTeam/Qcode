@@ -32,8 +32,8 @@ https://api.stackexchange.com/docs/
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| AppBar  | ![#4B6587](https://via.placeholder.com/10/0a192f?text=+) #4B6587|
-| Chip | ![#4CAF50](https://via.placeholder.com/10/4CAF50?text=+) #4CAF50 |
+| AppBar  | #4B6587 |
+| Chip | #4CAF50 |
 
 
 
