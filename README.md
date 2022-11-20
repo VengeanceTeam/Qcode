@@ -23,10 +23,11 @@ https://api.stackexchange.com/docs/
 ## Authors
 
 - [@Yazan Radaideh](https://github.com/yazanR2000)
+- [@Yazeed Ghazalat](https://github.com/YazeedGhazalat)
 - [@Ahmad Agha](https://github.com/AhmadAgha99)
 - [@Mohammad Bany Saleh](https://github.com/MBS-99)
 - [@Mohammad Ibrahim](https://github.com/mohammad6202)
-- [@Yazeed Ghazalat](https://github.com/YazeedGhazalat)
+
 
 ## Color Reference
 
