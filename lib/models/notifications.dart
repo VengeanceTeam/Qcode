@@ -4,7 +4,7 @@ import '../models/user.dart' as u;
 
 class Notifications {
   Future<void> PushNotification(
-      OwnerId, questionTitle, commentContent, isComment) async {
+      OwnerId, questionTitle, commentContent, isComment, actionTime) async {
     String notificationBody = '';
     String notificationSubTitle = '';
 
@@ -29,8 +29,11 @@ class Notifications {
         .doc(OwnerId)
         .collection('NewNotifications')
         .add({
-      'title': '$CommentatorName $notificationBody',
+      'CommentatorName': '$CommentatorName',
+      'title': '$notificationBody',
       'subtitle': '$notificationSubTitle',
+      'actionTime': '$actionTime',
+      'timestamp': FieldValue.serverTimestamp()
     });
   }
 }

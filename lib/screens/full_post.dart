@@ -121,17 +121,15 @@ class _FullPostState extends State<FullPost> {
                       details['question']['code'],
                       details['question']['type'],
                     ),
-                  
 
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      
                       Chip(
                         label: Text(
                           details['question']['type'],
-                          style:
-                      TextStyle(fontSize: 15, color: Colors.blueGrey.shade300),
+                          style: TextStyle(
+                              fontSize: 15, color: Colors.blueGrey.shade300),
                         ),
                       ),
                       if (details['question']['code'] != "null")
@@ -197,6 +195,7 @@ class _FullPostState extends State<FullPost> {
               "isComment": true,
               // "questionOwnerId": details['userId'],
               "questionOwnerId": details['questionOwnerId'],
+              'questionTitle': details['question']['questionTitle'].toString()
             },
           );
         },

@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:date_time_format/date_time_format.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -40,6 +41,8 @@ class _CommentSheetState extends State<CommentSheet> {
 
     String questiOwnerId = details['questionOwnerId'].toString();
     String questionTitle = details['questionTitle'].toString();
+    DateTime now = new DateTime.now();
+    final String currentTime = now.format(DateTimeFormats.american);
     Notifications x = new Notifications();
 
     return Scaffold(
@@ -81,12 +84,8 @@ class _CommentSheetState extends State<CommentSheet> {
                             details['id'],
                           );
 
-                          x.PushNotification(
-                            questiOwnerId,
-                            questionTitle,
-                            details['comment'],
-                            true,
-                          );
+                          x.PushNotification(questiOwnerId, questionTitle,
+                              details['comment'], true, currentTime);
                         } else {
                           await Question.addNewReply(
                             {
@@ -96,11 +95,11 @@ class _CommentSheetState extends State<CommentSheet> {
                             details['id'],
                           );
                           x.PushNotification(
-                            details['commentOwnerId'].toString(),
-                            questionTitle,
-                            details['comment'],
-                            false,
-                          );
+                              details['commentOwnerId'].toString(),
+                              questionTitle,
+                              details['comment'],
+                              false,
+                              currentTime);
                         }
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
