@@ -124,7 +124,7 @@ class _CommentSheetState extends State<CommentSheet> {
                         _isLoading = !_isLoading;
                       });
                     },
-                    child: const Text("Done"),
+                    child: const Text("Post"),
                   ),
           ),
         ],

@@ -91,8 +91,9 @@ class _CommentComponentState extends State<CommentComponent> {
                     trailing: Icon(Icons.push_pin),
                   ),
                 ListTile(
-                  onTap: (){
-                    Navigator.of(context).pushNamed('/profile',arguments: widget._comment['userId']);
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/profile',
+                        arguments: widget._comment['userId']);
                   },
                   dense: true,
                   leading: CircleAvatar(
@@ -110,11 +111,12 @@ class _CommentComponentState extends State<CommentComponent> {
                   trailing:
                       widget._question['userId'] == widget._comment['userId']
                           ? Chip(
+                              backgroundColor: Colors.orange.shade100,
                               label: Text(
                                 "auther",
                                 style: TextStyle(
                                   fontSize: 10,
-                                  color: Colors.grey,
+                                  color: Colors.orange,
                                 ),
                               ),
                             )
@@ -235,11 +237,12 @@ class _CommentComponentState extends State<CommentComponent> {
                             trailing: widget._question['userId'] ==
                                     data[index]['userId']
                                 ? Chip(
+                                    backgroundColor: Colors.orange.shade100,
                                     label: Text(
                                       "auther",
                                       style: TextStyle(
                                         fontSize: 10,
-                                        color: Colors.grey,
+                                        color: Colors.orange,
                                       ),
                                     ),
                                   )
